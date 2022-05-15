@@ -67,6 +67,7 @@ class TVSeries {
             $statement = $this->db->prepare($statement);
             $statement->execute();
             $response = $statement->fetch(\PDO::FETCH_ASSOC);
+            unset($response['id']);
             return $response;
         } catch (\PDOException $e) {
             exit($e->getMessage());

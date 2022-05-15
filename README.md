@@ -2,7 +2,7 @@
 Filename: prime_number.php <br>
 URL: http://localhost/exogroup/prime_numbers.php <br><br>
 
-### ASCCII ARRAY TASK
+### ASCII ARRAY TASK
 Filename: ascii_array.php <br>
 URL: http://localhost/exogroup/ascii_array.php <br><br>
 
