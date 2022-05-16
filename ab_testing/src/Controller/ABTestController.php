@@ -55,7 +55,15 @@ class ABTestController {
         $abTest = new ABTestData($promoId);
         $promotion = $abTest->getPromotionName();
         $designs = $abTest->getAllDesigns();
-        return [$promotion];
+        return [
+            'id' => $promoId,
+            'promotion' => $promotion,
+            'designs' => $this->mapDesigns($designs, $promoId)
+        ];
+    }
+
+    private function mapDesigns(array $designs, int $promoId): array
+    {
         return array_map(function ($item, $promoId) {
             return $item;
         }, $designs, [$promoId]);
